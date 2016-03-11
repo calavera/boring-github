@@ -1,0 +1,21 @@
+{
+  "name": "Boring GitHub",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Remove GitHub reactions from issues and pull requests",
+  "icons": { "16": "icons/icon16.png",
+             "48": "icons/icon48.png",
+            "128": "icons/icon128.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*/issues/*",
+        "https://github.com/*/*/pull/*"
+      ],
+      "js": [
+        "src/jquery-2.2.0.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
